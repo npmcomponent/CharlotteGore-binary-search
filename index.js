@@ -1,11 +1,11 @@
-var Result = function(arr, target){
-
-  this._source = arr;
+module.exports = function(arr, target){
 
   var search = function search( low, high ){
 
     if( low > high ){
+
       return [high, false];
+
     }
 
     if( arr[low] === target){
@@ -27,39 +27,6 @@ var Result = function(arr, target){
 
   }
   
-  var result = search( 0, arr.length-1 );
-
-  this._exact = result[1];
-  this._matchingIndex = result[0];
-
-  return this;
-
-}
-
-Result.prototype = {
-
-  isExactMatch : function(){
-
-    return this._exact;
-
-  },
-
-  index : function(){
-
-    return this._matchingIndex;
-
-  },
-
-  value : function(){
-
-    return this._source[this._matchingIndex];
-
-  }
-
-}
-
-module.exports = function( arr, target ){
-
-  return new Result( arr, target );
+  return search( 0, arr.length-1 );
 
 }
