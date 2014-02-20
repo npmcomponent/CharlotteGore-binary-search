@@ -1,3 +1,4 @@
+*This repository is a mirror of the [component](http://component.io) module [charlottegore/binary-search](http://github.com/charlottegore/binary-search). It has been modified to work with NPM+Browserify. You can install it using the command `npm install npmcomponent/charlottegore-binary-search`. Please do not open issues or send pull requests against this repo. If you have issues with this repo, report it to [npmcomponent](https://github.com/airportyh/npmcomponent).*
 # binary-search
 
   A binary search algorithm for finding values in sorted arrays.
